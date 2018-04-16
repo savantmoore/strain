@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Strain Finder</title>
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css">
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<!-- WELCOME -->
+<nav>
+	<div class="logo"><img src="images/strainFinder-logo.png" alt=""></div>
+	<!-- To be added in the future -->
+	<!-- <ul class="nav">
+		<li>Find a Strain</li>
+		<li>About & Credits</li>
+		<li>THC as Alternative Medication</li>
+		<li>Studies & Links</li>
+	</ul> --> 
+</nav>
+
+<header>
+	<h1>Strain Finder</h1>
+	<h2>For Alternative Natural Medicinal Relief</h2>
+	<i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i>
+</header>
+
+
+<!-- HOW ARE YOU FEELING/SYMPTOMS -->
+	<!-- MEDICAL SYMPTOMS -->
+	<section id="medicalSymptoms">
+		<div class="wrapper">
+			<h3>Please check off one or more symptoms that describe how you are feeling.</h3>
+			<form action="">
+				<p class="error"></p>
+				<ul class="form">
+					<li>
+						<input type="checkbox" name="medSymptom" value="depression" id="depression"><label for="depression">Depressed</label>
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="insomnia" id="insomnia"><label for="insomnia"></label>Can't sleep (Insomnia)
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="pain" id="pain"><label for="pain"></label>Pain
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="stress" id="stress"><label for="stress"></label>Stress
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="cramps" id="cramps"><label for="cramps"></label>Cramps
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="hungry" id="hungry"><label for="hungry"></label>Lack of Appetite
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="nausea" id="nausea"><label for="nausea"></label> Nausea
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="fatigue" id="fatigue"><label for="fatigue"></label>Fatigue
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="headache" id="headache"><label for="headache"></label>Headache/Migraines
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="inflammation" id="inflammation"><label for="inflammation"></label>Inflammation
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="spasticity" id="spasticity"><label for="spasticity"></label>Muscle Spasms & Spasticity
+					</li>
+					<li>
+						<input type="checkbox" name="medSymptom" value="seizures" id="seizures"><label for="seizures"></label>Seizures
+					</li>
+				</ul>
+				<input class="button" type="submit" value="Show me Strains">
+			</form>
+		</div>
+	</section>
+
+<!-- DISPLAY STRAIN CHOICES -->
+	<section id="displayStrains">
+		<div class="wrapper">
+			<ul class="displayStrains mainCarousel">
+
+			</ul>
+		</div>
+	</section>
+<!-- INNER STRAIN PAGE -->
+
+<!-- FOOTER -->
+<footer>
+	<p>Created by Justine Nguyen, using StrainAPI from Evan Busse</p>
+</footer>
+
+<!-- SCRIPTS -->
+	<script src="https://use.fontawesome.com/a024ed12a1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.js"></script>
+	<script src="scripts/scripts.js"></script>
+</body>
+</html>
+
+<!-- NOTES + STRETCH GOALS -->
+<!-- Add flickity to display strains -->
+<!-- on click on individiual strain - expand strain details -->

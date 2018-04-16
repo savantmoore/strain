@@ -1,0 +1,193 @@
+body {
+	color: $green;
+	font-family: $primaryFont;
+}
+
+ul {
+	list-style: none;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 80%;
+}
+
+nav {
+	position: fixed;
+	@include flexDirect(row);
+	justify-content: space-between;
+	color: $white;
+	width: 100%;
+	.logo {
+		width: 20%;
+		padding: 20px;
+		img {
+			width: 50%;
+		}
+	}
+	ul {
+		@include flexDirect(row);
+		justify-content: space-between;
+		align-items: center;
+		li {
+			margin: auto 10px;
+		}
+	}
+}
+
+header {
+	@include flexDirect(column);
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	background: $green;
+	color: $white;
+	text-align:center;
+	h2 {
+		font-family: $secondaryFont;
+		font-style: italic;
+		font-weight: normal;
+	}
+}
+
+section {
+	margin:0;
+	background: $purple;
+	color: $white;
+	@include centerMost;
+}
+
+#medicalSymptoms {
+	min-height: 80vh;
+	h3 {
+		margin: 70px 0 auto;
+		text-align: center;
+		font-size: 2em;
+	}
+
+	.error {
+		text-align: center;
+		font-family: $secondaryFont;
+		font-style: italic;
+		font-size: 1.4em;
+		margin: 20px auto;
+		color: $white;
+		text-shadow: 1px 1px 7px tomato;
+	}
+}
+
+ul.form {
+	@include flexDirect(row);
+	flex-wrap:wrap;
+	justify-content: center;
+	li {
+		@include centerMost;
+		@include flexDirect(row);
+		margin: 20px;
+		width: 250px;
+		background: $green;
+		padding: 20px;
+		border-radius: 100px;
+		text-align: center;
+		&:hover {
+			background: darken($green, 10%);
+		}
+		&:active {
+			border: none;
+		}
+		&:focus {
+			border: none;
+		}
+	}
+	label {
+		@include centerMost;
+		text-align: center;
+	}
+	label:before {
+		content: '\f096';
+		padding-right: 20px;
+		font-family: 'FontAwesome';
+		font-size: 1.6em;
+	}
+	input[type=checkbox] {
+		visibility: hidden;
+		flex-shrink:1;
+		&:checked + label:before {
+			content: '\f046';
+		}
+	}
+}
+
+.button {
+		margin: 0 auto;
+		display:block;
+		text-align: center;
+		height: 50px;
+		width: 200px;
+		margin: 30px auto;
+		border-radius: 20px;
+		color: $charcoal;
+		background: $white;
+		border:none;
+		font-family: $secondaryFont;
+		font-size: 1.4em;
+		&:hover {
+			background: $darkGreen;
+			color: white;
+			font-weight: bold;
+		}
+	}
+
+ul.displayStrains {
+	@include flexDirect(row);
+	margin: 75px auto;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	li {
+		@include centerMost;
+		@include flexDirect(column);
+		width: 200px;
+		height: 200px;
+		margin: 20px;
+		padding: 20px;
+		text-align: center;
+		.name {
+		font-weight: bold;
+		line-height: 1.4em;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		}
+		.strainType {
+		font-size: 1em;
+		text-transform: capitalize;
+		font-style: italic;
+		font-family: $secondaryFont;
+		}
+	}
+	.hybrid {
+			background: darken($purple, 15%);
+			border-radius: 25%;
+		}
+	.indica {
+		@extend .hybrid;
+		background: darken($green, 15%)
+	}
+	.sativa {
+		@extend .hybrid;
+		background: $green;
+	}
+}
+
+footer {
+	background: darken($purple, 10%);
+	margin: 0;
+	padding: 0;
+	height: 50px;
+	p {
+		@extend footer;
+		@include centerMost;
+		font-family: $secondaryFont;
+		font-style: italic;
+		color: $white;
+	}
+}

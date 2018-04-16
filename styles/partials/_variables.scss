@@ -1,0 +1,33 @@
+$darkGreen:#465502;
+$green: #9fba47;
+$purple: #856285;
+$lightPurple:#bdb9e7;
+$charcoal:#36454f;
+$black: #000;
+$white: #fff;
+$grey: rgb(197, 197, 197);
+
+$primaryFont:'Roboto', sans-serif;;
+$secondaryFont:'Crimson Text', serif;
+
+//MIXINS
+@mixin flex {
+	display:flex;
+}
+
+@mixin centerMost {
+		@include flex;
+		justify-content:center;
+		align-items: center;
+}
+
+@mixin flexDirect($direction) {
+	@include flex;
+	flex-direction: $direction;
+}
+
+@mixin flexWrapper {
+	@include flexDirect(column);
+	width: 80%;
+	margin: 0 auto;
+}
